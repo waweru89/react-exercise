@@ -8,15 +8,17 @@ import "./index.css"
 const TableRow = ({ item, index }) => {
     const { name, unit_cost, qty } = item;
     const totalCost = (unit_cost * qty).toLocaleString();
-    formatCurrencies
+
+    
+    
   
     return (
       <tr key={index}>
         <td>{index + 1}</td>
         <td>{name}</td>
-        <td>{unit_cost.toLocaleString()}</td>
+        <td>KSH {unit_cost.toLocaleString()}</td>
         <td>{qty}</td>
-        <td>{totalCost}</td>
+        <td>KSH {totalCost}</td>
       </tr>
     );
   };
