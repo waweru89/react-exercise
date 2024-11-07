@@ -14,3 +14,5 @@ const items=[
         unit_cost:80
     }
 ]
+
+export default items

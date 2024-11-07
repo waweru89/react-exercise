@@ -2,6 +2,8 @@ import items from "./items"
 
 //Create a Table row component
 
+import "./index.css"
+
 function ShopKeeperApp(){
     return <div>
         <table>
