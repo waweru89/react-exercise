@@ -3,8 +3,7 @@ const items=[
         name:"Sugar",
         qty:120,
         unit_cost:200
-    },
-    {
+    },{
         name:"Milk",
         qty:60,
         unit_cost:200

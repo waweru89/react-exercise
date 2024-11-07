@@ -4,6 +4,23 @@ import items from "./items"
 
 import "./index.css"
 
+
+const TableRow = ({ item, index }) => {
+    const { name, unit_cost, qty } = item;
+    const totalCost = (unit_cost * qty).toLocaleString();
+    formatCurrencies
+  
+    return (
+      <tr key={index}>
+        <td>{index + 1}</td>
+        <td>{name}</td>
+        <td>{unit_cost.toLocaleString()}</td>
+        <td>{qty}</td>
+        <td>{totalCost}</td>
+      </tr>
+    );
+  };
+
 function ShopKeeperApp(){
     return <div>
         <table>
@@ -12,11 +29,13 @@ function ShopKeeperApp(){
                 <th>Name</th>
                 <th>unit_price</th>
                 <th>qty</th>
+                <th>total</th>
+
             </thead>
             <tbody>
-                {items.map((item)=>{
-                    return <td></td>
-                })}
+            {items.map((item, index) => (
+            <TableRow key={index} item={item} index={index} />
+        ))}
             </tbody>
         </table>
     </div>
